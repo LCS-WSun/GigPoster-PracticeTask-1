@@ -32,6 +32,55 @@ let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 // Begin your solution here...
 
 
+//Create the background
+
+canvas.fillColor = lightGrey
+
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+
+//Making the word undertone
+
+// I can see that the undertones is half between 0 and 50 so its 30
+
+
+canvas.translate(to: Point(x: 20, y: 380))
+canvas.drawAxes()
+
+// Undertones text
+canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 65, kerning: 0.0)
+
+for _ in 1...19 {
+    
+//Rotate origin
+canvas.rotate(by: -15)
+
+canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 65, kerning: 0.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*:
  ## Use Source Control
  
@@ -44,3 +93,4 @@ let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
  */
 PlaygroundPage.current.liveView = canvas
 
+}
