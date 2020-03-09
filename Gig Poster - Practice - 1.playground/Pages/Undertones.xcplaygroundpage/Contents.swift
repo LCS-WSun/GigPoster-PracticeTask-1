@@ -44,31 +44,46 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 // I can see that the undertones is half between 0 and 50 so its 30
 
 
-canvas.translate(to: Point(x: 20, y: 380))
-canvas.drawAxes()
+//I don't think you can rotate the other way
+
+
+//canvas.translate(to: Point(x: 25, y: 380))
+//canvas.drawAxes()
 
 // Undertones text
-canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 65, kerning: 0.0)
+//canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 64, kerning: 0.0)
 
-for _ in 1...19 {
+
+//for _ in 1...19 {
     
 //Rotate origin
-canvas.rotate(by: -15)
+//canvas.rotate(by: 2)
 
-canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 65, kerning: 0.0)
-
-
+//canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 65, kerning: 0.0)
 
 
 
+//Draw horizontal lines in grid
 
+//for x in stride(from: 0, through: 400, by: 50) {
+    
+//canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+    
+canvas.translate(to: Point(x: 0, y: 370))
 
+//Rotate origin
+canvas.rotate(by: -90)
 
+for _ in 1...19 {
+//canvas.drawAxes()
 
+ //Undertones text
+canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 64, kerning: 0.0)
 
-
-
-
+    canvas.rotate(by: 5)
+    
+    
+    
 
 
 
