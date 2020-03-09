@@ -79,7 +79,12 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 canvas.textColor = deepRed
 
-canvas.drawText(message: "straight music presents ", at: Point(x: 25, y: 550), size: 13, kerning: 0.0)
+canvas.drawText(message: "straight music presents ", at: Point(x: 20, y: 550), size: 11, kerning: 0.0)
+
+canvas.drawText(message: "the undertones", at: Point(x: 20, y: 539), size: 11, kerning: 0.0)
+
+
+
 
 
 canvas.translate(to: Point(x: -11 , y: 370))
