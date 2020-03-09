@@ -29,6 +29,9 @@ let canvas = Canvas(width: 400, height: 600)
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
+let black = Color(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+
+
 // Begin your solution here...
 
 
@@ -45,6 +48,7 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
 //I don't think you can rotate the other way
+//This is wrong
 
 
 //canvas.translate(to: Point(x: 25, y: 380))
@@ -69,22 +73,40 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
     
 //canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
     
-canvas.translate(to: Point(x: 0, y: 370))
+
+
+//The small texts (understanding that this goes first (sequence) since it has not been rotated yet
+
+canvas.textColor = deepRed
+
+canvas.drawText(message: "straight music presents ", at: Point(x: 25, y: 550), size: 13, kerning: 0.0)
+
+
+canvas.translate(to: Point(x: -11 , y: 370))
 
 //Rotate origin
 canvas.rotate(by: -90)
 
+
 for _ in 1...19 {
 //canvas.drawAxes()
 
- //Undertones text
+    
+canvas.textColor = black
+    
+//Undertones text
 canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 64, kerning: 0.0)
 
     canvas.rotate(by: 5)
+}
     
-    
+//The color logic
+
+//Every time it runs, the color gets lighter, this has something to with the 1...19 for in loop
     
 
+
+    
 
 
 
@@ -108,4 +130,3 @@ canvas.drawText(message: "undertones", at: Point(x: 0, y: 0), size: 64, kerning:
  */
 PlaygroundPage.current.liveView = canvas
 
-}
